@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+
+\bibitem{ApuntesSCD}
+Pedro~Villar Castro.
+\newblock Sistemas concurrentes distribuidos.
+\newblock 2015.
+
+\bibitem{apuntessmm}
+Jesús Chamorro.
+\newblock Sistemas multimedia.decsai.
+\newblock 2015.
+
+\bibitem{Curva}
+http://docs.oracle.com/javase/7/docs/api/java/awt/geom/quadcurve2d.double.html,
+  consultado el 12 de Julio de 2015.
+
+\bibitem{Ellipse}
+http://docs.oracle.com/javase/7/docs/api/java/awt/geom/ellipse2d.double.html,
+  consultado el 12 de Julio de 2015.
+
+\bibitem{guardar}
+http://www.tutorialspoint.com/java/java\_string\_lastindexof.htm, consultado el
+  12 de Julio de 2015.
+
+\bibitem{hebras}
+http://recursosformacion.com/wordpress/2013/05/java-para-programadores-6-4hebras-y-animacion/,
+  consultado el 5 de Septiembre de 2015.
+
+\bibitem{Linea}
+http://docs.oracle.com/javase/7/docs/api/java/awt/geom/line2d.float.html,
+  consultado el 01 de Junio de 2015.
+
+\bibitem{apuntestimd}
+Rafael Molina.
+\newblock Tratamientos de imágenes digitales.decsai.
+\newblock 2015.
+
+\bibitem{graphics}
+http://www.lcc.uma.es/~galvez/ftp/libros/java2d.pdf, consultado el 12 de Julio
+  de 2015.
+
+\bibitem{Rectangulo}
+http://docs.oracle.com/javase/7/docs/api/java/awt/geom/rectangle2d.double.html,
+  consultado el 12 de Julio de 2015.
+
+\bibitem{Rectangulored}
+http://docs.oracle.com/javase/7/docs/api/java/awt/geom/roundrectangle2d.double.html,
+  consultado el 12 de Julio de 2015.
+
+\bibitem{Shape}
+http://docs.oracle.com/javase/7/docs/api/java/awt/shape.html, consultado el 12
+  de Julio de 2015.
+
+\end{thebibliography}

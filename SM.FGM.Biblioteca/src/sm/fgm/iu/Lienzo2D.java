@@ -1,0 +1,286 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package sm.fgm.iu;
+
+import java.awt.AlphaComposite;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Composite;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Cursor;
+import java.awt.RenderingHints;
+
+import java.awt.Shape;
+import java.awt.Stroke;
+import java.awt.geom.Ellipse2D;
+//import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.RectangularShape;
+import java.util.ArrayList;
+import java.util.List;
+import sm.fgm.graficos.Linea;
+//import sm.fgm.graficos.Linea;
+/**
+ *No se usa en practica final
+ * @author javi
+ */
+public class Lienzo2D extends javax.swing.JPanel {
+
+     
+    
+    public static final int FORMA_PUNTO=0,FORMA_LINEA=1,FORMA_RECTANGULO=2,FORMA_OVALO=3;
+    Color color = Color.BLACK;
+    Stroke stroke = new BasicStroke(1.0F); 
+    protected Point2D p;
+    protected List<Shape> vShape = new ArrayList();
+    protected Shape sh_creado;
+    protected boolean relleno=false;
+    protected boolean transparencia = false;
+    protected boolean alisado = false;
+    protected boolean editar = false;
+    protected int modo=0;
+    Composite comp=AlphaComposite.getInstance(AlphaComposite.SRC_OVER,0.5f);
+    RenderingHints render= new RenderingHints(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+    protected Shape clip = null;
+
+    public Shape getClip() {
+        return clip;
+    }
+
+    public void setClip(Shape clip) {
+        this.clip = clip;
+    }
+     
+        
+    /**
+     * Creates new form Lienzo2D
+     */
+    public Lienzo2D() {
+        initComponents();
+    }
+
+    
+    public void paint(Graphics g){
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D)g;
+        g2d.setPaint(color);
+        g2d.setStroke(stroke);
+        if(transparencia){g2d.setComposite(comp);}
+        if(alisado){g2d.setRenderingHints(render);}
+        if (this.clip != null) {
+             g2d.clip(this.clip);
+         }
+        for(Shape s:vShape) {
+            if(relleno) g2d.fill(s);
+                g2d.draw(s);
+        }
+}
+  
+    private Shape createShape(Point2D p_a){
+     
+        if(p_a==null){
+            return null;
+        }
+      
+        if(modo==0){
+             
+             //sh_creado=(Shape) new Point2D.Double(p_a.getX(),p_a.getY());
+             sh_creado= new Linea(p_a,p_a); //punto con las mismas coordenadas, asi crea punto en vez linea
+            // sh_creado=(Shape)new Point2D.Double();
+             
+             return sh_creado;
+         }else if(modo==1){
+             sh_creado= new Linea(p_a,p_a); // linea
+             return sh_creado;
+         }else if(modo==2){  
+             sh_creado= new Rectangle2D.Double(p_a.getX(),p_a.getY(),0,0); // rectangulo
+             return sh_creado;
+         }else if(modo==3){ 
+             sh_creado= new Ellipse2D.Double(p_a.getX(),p_a.getY(),0,0);
+             return sh_creado;
+         }else{
+       
+            return sh_creado=null;
+         }
+    }
+   
+    /*http://docs.oracle.com/javase/7/docs/api/java/awt/geom/Line2D.html*/
+   private void updateShape(Point2D p_a, Point2D p_b){
+        if (sh_creado instanceof Linea) {
+            ((Linea)sh_creado).setLine(p_a, p_b);
+         }else if(sh_creado instanceof RectangularShape) {
+             ((RectangularShape)sh_creado).setFrameFromDiagonal(p_a, p_b);
+      }
+ 
+    }
+    
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Stroke getStroke() {
+        return stroke;
+    }
+
+    public void setStroke(Stroke stroke) {
+        this.stroke = stroke;
+    }
+
+    public boolean isRelleno() {
+        return relleno;
+    }
+
+    public void setRelleno(boolean relleno) {
+        this.relleno = relleno;
+    }
+
+    public boolean isTransparencia() {
+        return transparencia;
+    }
+
+    public void setTransparencia(boolean transparencia) {
+        this.transparencia = transparencia;
+    }
+
+    public boolean isAlisado() {
+        return alisado;
+    }
+
+    public void setAlisado(boolean alisado) {
+        this.alisado = alisado;
+    }
+
+    public boolean isEditar() {
+        return editar;
+    }
+
+    public void setEditar(boolean editar) {
+        this.editar = editar;
+        if (this.editar) { 
+            setCursor(Cursor.getDefaultCursor());
+        } else {
+            Cursor c= new Cursor(1);
+            setCursor(c);
+         }
+        
+    }
+
+    public int getModo() {
+        return modo;
+    }
+
+    public void setModo(int modo) {
+        this.modo = modo;
+    }
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
+            }
+        });
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                formMouseDragged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+       
+        p = evt.getPoint();
+        
+        if(editar){
+            this.sh_creado =  getSelectedShape(p);
+           /* if(sh_creado instanceof RectangularShape ){
+                sh_creado =  (RectangularShape)getSelectedShape(evt.getPoint());
+            }else if(sh_creado instanceof Linea ){
+                sh_creado =  (Linea)getSelectedShape(evt.getPoint());
+            }*/
+                    //setCursor(new Cursor(15));//anadido
+        }else{
+            
+            Shape nuevo_s= createShape(p);
+            vShape.add(nuevo_s);
+        } // paso  punto en create hago if-else
+    }//GEN-LAST:event_formMousePressed
+
+    private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
+        this. formMouseDragged(evt);
+        if (editar) {//anadido
+             setCursor(Cursor.getDefaultCursor());
+      }
+    }//GEN-LAST:event_formMouseReleased
+
+    private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
+        Point2D punto = evt.getPoint();
+            
+                if(editar){
+                       //Point2D pnt=new Point2D.Double(punto.getX(),punto.getY());
+                       /*if (sh_creado instanceof Linea){
+                            ((Linea)sh_creado).setLocation(punto);
+                         } else{ */    
+                    if(sh_creado!=null){
+                       setLocation(sh_creado,punto);}
+                } else if (modo != 0) {//el punto no se actualiza{
+                     updateShape(p, punto);
+                }
+    
+             
+        repaint();
+    }//GEN-LAST:event_formMouseDragged
+
+    private Shape getSelectedShape(Point2D p){
+        for(Shape s:vShape)
+            if(s.contains(p)) return s;
+                return null;
+}
+    
+    
+private void setLocation(Shape s, Point2D pos){
+    if(s instanceof RectangularShape){
+            //((Rectangle)s).setLocation((Point)pos);
+             //((Rectangle)s).setRect(pos.getX(), pos.getY() , ((Rectangle)s).width, ((Rectangle)s).height);
+             ((RectangularShape)s).setFrame(pos.getX(), pos.getY(), ((RectangularShape)s).getWidth(),((RectangularShape)s).getHeight());
+       }else if (s instanceof Linea){
+            ((Linea)s).setLocation(pos);
+        }
+}
+
+   
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // End of variables declaration//GEN-END:variables
+}
+/*http://docs.oracle.com/javase/7/docs/api/java/awt/geom/RectangularShape.html*/

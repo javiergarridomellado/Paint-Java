@@ -1,0 +1,68 @@
+
+
+
+@misc{ apuntesti,
+	key="w3schools",
+       title = "http://http://www.w3schools.com/",
+       year = "consultado el 01 de Junio de 2015" 
+}
+
+@misc{ Shape,
+	key="Shape",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/Shape.html",
+       year = "consultado el 12 de Julio de 2015" 
+}
+@misc{ Rectangulo,
+	key="Rectangulo",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/geom/Rectangle2D.Double.html",
+       year = "consultado el 12 de Julio de 2015" 
+}
+@misc{ Linea,
+	key="Linea",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/geom/Line2D.Float.html",
+       year = "consultado el 01 de Junio de 2015" 
+}
+@misc{ Rectangulored,
+	key="Rectangulored",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/geom/RoundRectangle2D.Double.html",
+       year = "consultado el 12 de Julio de 2015" 
+}
+
+@misc{ Ellipse,
+	key="Ellipse",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/geom/Ellipse2D.Double.html",
+       year = "consultado el 12 de Julio de 2015" 
+}
+@misc{ guardar,
+	key="guardar",
+       title = "http://www.tutorialspoint.com/java/java\_string\_lastindexof.htm",
+       year = "consultado el 12 de Julio de 2015" 
+}
+
+@misc{ Curva,
+	key="Curva",
+       title = "http://docs.oracle.com/javase/7/docs/api/java/awt/geom/QuadCurve2D.Double.html",
+       year = "consultado el 12 de Julio de 2015" 
+}
+
+@misc{ graphics,
+	key="Nociones sobre Graphics",
+       title = "http://www.lcc.uma.es/~galvez/ftp/libros/Java2D.pdf",
+       year = "consultado el 12 de Julio de 2015" 
+}
+
+http://www.lcc.uma.es/~galvez/ftp/libros/Java2D.pdf
+@article{apuntestimd, 
+auTHor = "Rafael Molina ", 
+Title = {Tratamientos de Imágenes Digitales.Decsai.}, 
+publisher = "Decsai", 
+YEAR = 2015, 
+} 
+
+@article{apuntessmm, 
+auTHor = "Jesús Chamorro ", 
+Title = {Sistemas Multimedia.Decsai.}, 
+publisher = "Decsai", 
+YEAR = 2015, 
+} 
+

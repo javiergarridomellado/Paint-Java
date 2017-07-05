@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SM.FGM">
+  <ClassDiagramComponents>
+    <Class name="Figura" package="sm.fgm.graficos" visibility="public" isAbstract="true" xPosition="1080.0" yPosition="24.0">
+      <Fields>
+        <Field name="comp" type="Composite" visibility="package"/>
+        <Field name="comp2" type="Composite" visibility="package"/>
+        <Field name="render" type="RenderingHints" visibility="package"/>
+        <Field name="render2" type="RenderingHints" visibility="package"/>
+        <Field name="transp" type="Composite" visibility="protected"/>
+        <Field name="color" type="Color" visibility="protected"/>
+        <Field name="trazo" type="Stroke" visibility="protected"/>
+        <Field name="relleno" type="boolean" visibility="protected"/>
+        <Field name="degradadovertical" type="boolean" visibility="protected"/>
+        <Field name="degradadohorizontal" type="boolean" visibility="protected"/>
+        <Field name="alisado" type="boolean" visibility="protected"/>
+        <Field name="editar" type="boolean" visibility="protected"/>
+        <Field name="patronDiscontinuidad" type="float" visibility="package"/>
+        <Field name="trazoseleccion" type="Stroke" visibility="package"/>
+        <Field name="sh_creado" type="Shape" visibility="protected"/>
+        <Field name="p" type="Point2D" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getColor" returnType="Color" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="getColorRelleno" returnType="Color" visibility="public"/>
+        <Method name="setColorRelleno" returnType="void" visibility="public">
+          <Argument type="Color" name="colorRelleno"/>
+        </Method>
+        <Method name="isEditar" returnType="boolean" visibility="public"/>
+        <Method name="setEditar" returnType="void" visibility="public">
+          <Argument type="boolean" name="editar"/>
+        </Method>
+        <Method name="isDegradadovertical" returnType="boolean" visibility="public"/>
+        <Method name="setDegradadovertical" returnType="void" visibility="public">
+          <Argument type="boolean" name="degradadovertical"/>
+        </Method>
+        <Method name="isDegradadohorizontal" returnType="boolean" visibility="public"/>
+        <Method name="setDegradadohorizontal" returnType="void" visibility="public">
+          <Argument type="boolean" name="degradadohorizontal"/>
+        </Method>
+        <Method name="getTrazo" returnType="Stroke" visibility="public"/>
+        <Method name="setTrazo" returnType="void" visibility="public">
+          <Argument type="Stroke" name="trazo"/>
+        </Method>
+        <Method name="getTransp" returnType="Composite" visibility="public"/>
+        <Method name="setTransp" returnType="void" visibility="public">
+          <Argument type="Composite" name="transp"/>
+        </Method>
+        <Method name="getRelleno" returnType="boolean" visibility="public"/>
+        <Method name="setRelleno" returnType="void" visibility="public">
+          <Argument type="boolean" name="relleno"/>
+        </Method>
+        <Method name="getAlisado" returnType="boolean" visibility="public"/>
+        <Method name="setAlisado" returnType="void" visibility="public">
+          <Argument type="boolean" name="alisado"/>
+        </Method>
+        <Method name="pintar" returnType="void" visibility="public">
+          <Argument type="Graphics2D" name="g2d"/>
+        </Method>
+        <Method name="pintarDegradadoHorizontal" returnType="void" visibility="public">
+          <Argument type="Graphics2D" name="g2d"/>
+        </Method>
+        <Method name="pintarDegradadoVertical" returnType="void" visibility="public">
+          <Argument type="Graphics2D" name="g2d"/>
+        </Method>
+        <Method name="marcarFigura" returnType="void" visibility="public">
+          <Argument type="Graphics2D" name="g2d"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MiCurva" package="sm.fgm.graficos" visibility="public" xPosition="20.0" yPosition="945.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="x1"/>
+          <Argument type="double" name="y1"/>
+          <Argument type="double" name="ctrlx"/>
+          <Argument type="double" name="ctrly"/>
+          <Argument type="double" name="x2"/>
+          <Argument type="double" name="y2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBounds" returnType="Rectangle" visibility="public"/>
+        <Method name="getBounds2D" returnType="Rectangle2D" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="pd"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="getCtrlPt" returnType="Point2D" visibility="public"/>
+        <Method name="getCtrlX" returnType="double" visibility="public"/>
+        <Method name="getCtrlY" returnType="double" visibility="public"/>
+        <Method name="getP1" returnType="Point2D" visibility="public"/>
+        <Method name="getP2" returnType="Point2D" visibility="public"/>
+        <Method name="getX1" returnType="double" visibility="public"/>
+        <Method name="getX2" returnType="double" visibility="public"/>
+        <Method name="getY1" returnType="double" visibility="public"/>
+        <Method name="getY2" returnType="double" visibility="public"/>
+        <Method name="setCurve" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+          <Argument type="Point2D" name="p3"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+          <Argument type="Point2D" name="p3"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="Point2D" name="pos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MiElipse" package="sm.fgm.graficos" visibility="public" xPosition="526.0" yPosition="945.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="d1"/>
+          <Argument type="Double" name="d2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBounds" returnType="Rectangle" visibility="public"/>
+        <Method name="getBounds2D" returnType="Rectangle2D" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="pd"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="setFrame" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="getHeight" returnType="double" visibility="public"/>
+        <Method name="getWidth" returnType="double" visibility="public"/>
+        <Method name="getX" returnType="double" visibility="public"/>
+        <Method name="getY" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MiLinea" package="sm.fgm.graficos" visibility="public" xPosition="1013.0" yPosition="945.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Method>
+        <Method name="setLine" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Method>
+        <Method name="isNear" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="p"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="p"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="Point2D" name="pos"/>
+        </Method>
+        <Method name="getBounds" returnType="Rectangle" visibility="public"/>
+        <Method name="getBounds2D" returnType="Rectangle2D" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="getX1" returnType="double" visibility="public"/>
+        <Method name="getY1" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MiRectangulo" package="sm.fgm.graficos" visibility="public" xPosition="1440.0" yPosition="945.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="d1"/>
+          <Argument type="Double" name="d2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBounds" returnType="Rectangle" visibility="public"/>
+        <Method name="getBounds2D" returnType="Rectangle2D" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="pd"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="setFrame" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="getHeight" returnType="double" visibility="public"/>
+        <Method name="getWidth" returnType="double" visibility="public"/>
+        <Method name="getX" returnType="double" visibility="public"/>
+        <Method name="getY" returnType="double" visibility="public"/>
+        <Method name="getX1" returnType="double" visibility="public"/>
+        <Method name="getY1" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MiRectanguloRedondeado" package="sm.fgm.graficos" visibility="public" xPosition="1871.0" yPosition="945.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Double" name="d1"/>
+          <Argument type="Double" name="d2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBounds" returnType="Rectangle" visibility="public"/>
+        <Method name="getBounds2D" returnType="Rectangle2D" visibility="public"/>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Point2D" name="pd"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="intersects" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="double" name="d"/>
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+        </Method>
+        <Method name="contains" returnType="boolean" visibility="public">
+          <Argument type="Rectangle2D" name="rd"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+        </Method>
+        <Method name="getPathIterator" returnType="PathIterator" visibility="public">
+          <Argument type="AffineTransform" name="at"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="Point2D" name="p1"/>
+          <Argument type="Point2D" name="p2"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="setFrame" returnType="void" visibility="public">
+          <Argument type="double" name="d1"/>
+          <Argument type="double" name="d2"/>
+          <Argument type="double" name="d3"/>
+          <Argument type="double" name="d4"/>
+        </Method>
+        <Method name="getHeight" returnType="double" visibility="public"/>
+        <Method name="getWidth" returnType="double" visibility="public"/>
+        <Method name="getX" returnType="double" visibility="public"/>
+        <Method name="getY" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConversionGrisOp" package="sm.fgm.imagen" visibility="public" xPosition="1002.0" yPosition="2013.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="filter" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EliminacionMitadBandaCentralOp" package="sm.fgm.imagen" visibility="public" xPosition="745.0" yPosition="1858.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="filter" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FiltroSeno" package="sm.fgm.imagen" visibility="public" xPosition="745.0" yPosition="2013.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="filtroSeno" returnType="LookupTable" visibility="public" isStatic="true"/>
+        <Method name="seno" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="w"/>
+        </Method>
+        <Method name="FiltroSeno" returnType="LookupTable" visibility="public">
+          <Argument type="double" name="i"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PotenciaNesima" package="sm.fgm.imagen" visibility="public" xPosition="745.0" yPosition="2194.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="PotenciaNesima" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="n"/>
+        </Method>
+        <Method name="potencia" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RaizNesima" package="sm.fgm.imagen" visibility="public" xPosition="745.0" yPosition="2391.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="RaizNesima" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="n"/>
+        </Method>
+        <Method name="raiz" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RestaOp" package="sm.fgm.imagen" visibility="public" xPosition="1132.0" yPosition="1858.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BufferedImage" name="img"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="binaryOp" returnType="int" visibility="public">
+          <Argument type="int" name="v1"/>
+          <Argument type="int" name="v2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SumaOp" package="sm.fgm.imagen" visibility="public" xPosition="1080.0" yPosition="2194.0">
+      <Fields>
+        <Field name="alpha" type="float" visibility="private"/>
+        <Field name="valor_alfa" type="float" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BufferedImage" name="img"/>
+          <Argument type="float" name="alpha"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="binaryOp" returnType="int" visibility="public">
+          <Argument type="int" name="v1"/>
+          <Argument type="int" name="v2"/>
+        </Method>
+        <Method name="setAlpha" returnType="void" visibility="public" isFinal="true">
+          <Argument type="float" name="alpha"/>
+        </Method>
+        <Method name="getAlpha" returnType="float" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TintadoOp" package="sm.fgm.imagen" visibility="public" xPosition="1080.0" yPosition="2435.0">
+      <Fields>
+        <Field name="mixColor" type="Color" visibility="private"/>
+        <Field name="mixValue" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Color" name="mixColor"/>
+          <Argument type="float" name="mixValue"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMixColor" returnType="Color" visibility="public"/>
+        <Method name="setMixColor" returnType="void" visibility="public">
+          <Argument type="Color" name="mixColor"/>
+        </Method>
+        <Method name="getMixValue" returnType="float" visibility="public"/>
+        <Method name="setMixValue" returnType="void" visibility="public">
+          <Argument type="float" name="mixValue"/>
+        </Method>
+        <Method name="filter" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TransformacionLogaritmica" package="sm.fgm.imagen" visibility="public" xPosition="1178.0" yPosition="2722.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="TransformacionLogaritmica" returnType="LookupTable" visibility="public" isStatic="true"/>
+        <Method name="logaritmo" returnType="LookupTable" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="UmbralizacionOp" package="sm.fgm.imagen" visibility="public" xPosition="745.0" yPosition="2722.0">
+      <Fields>
+        <Field name="umbral" type="int" visibility="private"/>
+        <Field name="c" type="Color" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="umbral"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="umbral"/>
+          <Argument type="Color" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUmbral" returnType="int" visibility="public"/>
+        <Method name="setUmbral" returnType="void" visibility="public">
+          <Argument type="int" name="umbral"/>
+        </Method>
+        <Method name="filter" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+        <Method name="filterBN" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+        <Method name="filterColor" returnType="BufferedImage" visibility="public">
+          <Argument type="BufferedImage" name="src"/>
+          <Argument type="BufferedImage" name="dest"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Lienzo2Dfinal" package="sm.fgm.iu" visibility="public" xPosition="46.0" yPosition="1744.0">
+      <Fields>
+        <Field name="FORMA_PUNTO" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="color" type="Color" visibility="package"/>
+        <Field name="colorRelleno" type="Color" visibility="package"/>
+        <Field name="discontinuidad" type="boolean" visibility="protected"/>
+        <Field name="puntoControlfalta" type="boolean" visibility="package"/>
+        <Field name="stroke" type="Stroke" visibility="package"/>
+        <Field name="p" type="Point2D" visibility="protected"/>
+        <Field name="vShape" type="List&lt;Shape&gt;" visibility="protected"/>
+        <Field name="sh_creado" type="Shape" visibility="protected"/>
+        <Field name="relleno" type="boolean" visibility="protected"/>
+        <Field name="degradadovertical" type="boolean" visibility="protected"/>
+        <Field name="degradadohorizontal" type="boolean" visibility="protected"/>
+        <Field name="grado_transparencia" type="int" visibility="protected"/>
+        <Field name="alisado" type="boolean" visibility="protected"/>
+        <Field name="editar" type="boolean" visibility="protected"/>
+        <Field name="modo" type="int" visibility="protected"/>
+        <Field name="comp" type="Composite" visibility="package"/>
+        <Field name="clip" type="Shape" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isDegradadovertical" returnType="boolean" visibility="public"/>
+        <Method name="getGrado_transparencia" returnType="int" visibility="public"/>
+        <Method name="setGrado_transparencia" returnType="void" visibility="public">
+          <Argument type="int" name="grado_transparencia"/>
+        </Method>
+        <Method name="setDegradadovertical" returnType="void" visibility="public">
+          <Argument type="boolean" name="degradadovertical"/>
+        </Method>
+        <Method name="isDegradadohorizontal" returnType="boolean" visibility="public"/>
+        <Method name="setDegradadohorizontal" returnType="void" visibility="public">
+          <Argument type="boolean" name="degradadohorizontal"/>
+        </Method>
+        <Method name="getClip" returnType="Shape" visibility="public"/>
+        <Method name="setClip" returnType="void" visibility="public">
+          <Argument type="Shape" name="clip"/>
+        </Method>
+        <Method name="paint" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="createShape" returnType="Shape" visibility="private">
+          <Argument type="Point2D" name="p_a"/>
+        </Method>
+        <Method name="updateShape" returnType="void" visibility="private">
+          <Argument type="Point2D" name="p_a"/>
+          <Argument type="Point2D" name="p_b"/>
+        </Method>
+        <Method name="getColor" returnType="Color" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="getStroke" returnType="Stroke" visibility="public"/>
+        <Method name="setStroke" returnType="void" visibility="public">
+          <Argument type="Stroke" name="stroke"/>
+        </Method>
+        <Method name="getComp" returnType="Composite" visibility="public"/>
+        <Method name="setComp" returnType="void" visibility="public">
+          <Argument type="Composite" name="comp"/>
+        </Method>
+        <Method name="isRelleno" returnType="boolean" visibility="public"/>
+        <Method name="setRelleno" returnType="void" visibility="public">
+          <Argument type="boolean" name="relleno"/>
+        </Method>
+        <Method name="isAlisado" returnType="boolean" visibility="public"/>
+        <Method name="setAlisado" returnType="void" visibility="public">
+          <Argument type="boolean" name="alisado"/>
+        </Method>
+        <Method name="isEditar" returnType="boolean" visibility="public"/>
+        <Method name="setEditar" returnType="void" visibility="public">
+          <Argument type="boolean" name="editar"/>
+        </Method>
+        <Method name="isDiscontinuidad" returnType="boolean" visibility="public"/>
+        <Method name="setDiscontinuidad" returnType="void" visibility="public">
+          <Argument type="boolean" name="discontinuidad"/>
+        </Method>
+        <Method name="getModo" returnType="int" visibility="public"/>
+        <Method name="setModo" returnType="void" visibility="public">
+          <Argument type="int" name="modo"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;                           void" visibility="private"/>
+        <Method name="formMousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="formMouseReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="formMouseDragged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="getSelectedShape" returnType="Shape" visibility="private">
+          <Argument type="Point2D" name="p"/>
+        </Method>
+        <Method name="setLocation" returnType="void" visibility="private">
+          <Argument type="Shape" name="s"/>
+          <Argument type="Point2D" name="pos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Lienzo2DImagenfinal" package="sm.fgm.iu" visibility="public" xPosition="46.0" yPosition="2926.0">
+      <Fields>
+        <Field name="img" type="BufferedImage" visibility="package"/>
+        <Field name="ponerRecuadro" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isPonerRecuadro" returnType="boolean" visibility="public"/>
+        <Method name="setPonerRecuadro" returnType="void" visibility="public">
+          <Argument type="boolean" name="ponerRecuadro"/>
+        </Method>
+        <Method name="getImage" returnType="BufferedImage" visibility="public"/>
+        <Method name="setImage" returnType="void" visibility="public">
+          <Argument type="BufferedImage" name="img"/>
+        </Method>
+        <Method name="getImage" returnType="BufferedImage" visibility="public">
+          <Argument type="boolean" name="drawVector"/>
+        </Method>
+        <Method name="paintComponent" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="ponerRecuadro" returnType="void" visibility="private">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;                           void" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="sm.fgm.graficos.MiElipse" target="sm.fgm.graficos.Figura"/>
+    <IsRelation name="is" source="sm.fgm.graficos.MiRectangulo" target="sm.fgm.graficos.Figura"/>
+    <IsRelation name="is" source="sm.fgm.graficos.MiLinea" target="sm.fgm.graficos.Figura"/>
+    <IsRelation name="is" source="sm.fgm.graficos.MiCurva" target="sm.fgm.graficos.Figura"/>
+    <IsRelation name="is" source="sm.fgm.graficos.MiRectanguloRedondeado" target="sm.fgm.graficos.Figura"/>
+    <IsRelation name="is" source="sm.fgm.iu.Lienzo2DImagenfinal" target="sm.fgm.iu.Lienzo2Dfinal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

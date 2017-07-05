@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Practica_Finalv3">
+  <ClassDiagramComponents>
+    <Class name="Practica7" package="practica7" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaInterna" package="practica7" visibility="public" xPosition="20.0" yPosition="241.0">
+      <Fields>
+        <Field name="VP" type="VentanaPrincipal" visibility="package"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lienzo" type="sm.fgm.iu.Lienzo2DImagenfinal" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="VentanaPrincipal" name="v"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formInternalFrameActivated" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+        <Method name="getLienzo" returnType="Lienzo2DImagenfinal" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VentanaInternaCamara" package="practica7" visibility="public" xPosition="277.0" yPosition="9.0">
+      <Fields>
+        <Field name="player" type="Player" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPlayer" returnType="Player" visibility="public"/>
+        <Method name="getInstance" returnType="VentanaInternaCamara" visibility="public" isStatic="true"/>
+        <Method name="getFrame" returnType="BufferedImage" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formInternalFrameClosing" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaInternaGrabador" package="practica7" visibility="public" xPosition="785.0" yPosition="291.0">
+      <Fields>
+        <Field name="grabacion" type="SMSoundRecorder" visibility="package"/>
+        <Field name="botonGrabar" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="botonStop" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="File" name="f"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="botonGrabarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonStopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formInternalFrameClosing" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaInternaJMFPlayer" package="practica7" visibility="public" xPosition="993.0" yPosition="9.0">
+      <Fields>
+        <Field name="player" type="Player" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private">
+          <Argument type="File" name="f"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPlayer" returnType="Player" visibility="public"/>
+        <Method name="getInstance" returnType="VentanaInternaJMFPlayer" visibility="public" isStatic="true">
+          <Argument type="File" name="f"/>
+        </Method>
+        <Method name="getFrame" returnType="BufferedImage" visibility="public"/>
+        <Method name="play" returnType="void" visibility="public"/>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formInternalFrameClosing" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaInternaReproductor" package="practica7" visibility="public" xPosition="1308.0" yPosition="376.0">
+      <Fields>
+        <Field name="player" type="SMClipPlayer" visibility="package"/>
+        <Field name="botonPlayPause" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="botonStop" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="File" name="f"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="botonPlayPauseActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonStopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formInternalFrameClosing" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaInternaReproductorHebra" package="practica7" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="player" type="SMClipPlayer" visibility="package"/>
+        <Field name="runner" type="Hilo" visibility="package"/>
+        <Field name="barra" type="javax.swing.JProgressBar" visibility="private"/>
+        <Field name="botonPlayPause" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="botonStop" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="File" name="f"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="botonPlayPauseActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botonStopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formInternalFrameClosing" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.InternalFrameEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VentanaPrincipal" package="practica7" visibility="public" xPosition="3027.0" yPosition="20.0">
+      <Fields>
+        <Field name="imgFuente" type="BufferedImage" visibility="private"/>
+        <Field name="player" type="SMClipPlayer" visibility="package"/>
+        <Field name="hebra" type="Hilo" visibility="package"/>
+        <Field name="abrir" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="abrirArchivo" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="abrirAudio" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="abrirReproduccion" type="javax.swing.JButton" visibility="private"/>
+        <Field name="abrirVentanaCamara" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="abrirVentanaCaptura" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="abrirVentanaReproduccion" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="acercaDe" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="affineTransformOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="alisar" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="amarillo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="archivo" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="archivosGestion" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="aumentar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="aumentarBinaria" type="javax.swing.JButton" visibility="private"/>
+        <Field name="azul" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bandCombineOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="barraAtrib" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="barraAtributosImagenes" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="barraColor" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="barraFormas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="barraMultimedia" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="barraProgreso" type="javax.swing.JProgressBar" visibility="private"/>
+        <Field name="blanco" type="javax.swing.JButton" visibility="private"/>
+        <Field name="brilloSlider" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup2" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup3" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup4" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup5" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup6" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup7" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="buttonGroup8" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="camara" type="javax.swing.JButton" visibility="private"/>
+        <Field name="captura" type="javax.swing.JButton" visibility="private"/>
+        <Field name="colorConvertOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="contraste" type="javax.swing.JButton" visibility="private"/>
+        <Field name="conversionGris" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="convolveOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="curva" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="discontinuidad" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="disminuir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="disminuirBinaria" type="javax.swing.JButton" visibility="private"/>
+        <Field name="duplicar" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="editar" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="eliminarMitadBandaCentral" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="elipse" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="escritorio" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="filtro" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="grosor" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="guardar" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="guardarArchivo" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="guardarAudio" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="guardarAudio_" type="javax.swing.JButton" visibility="private"/>
+        <Field name="iluminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel10" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel11" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel12" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="linea" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="lookupOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="men_imagen" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="men_info" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="mostrar_Color" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="mostrar_Relleno" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="mostrar_Seleccion" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="negativo" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="negro" type="javax.swing.JButton" visibility="private"/>
+        <Field name="nuevo" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="nuevoArchivo" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="open" type="javax.swing.JButton" visibility="private"/>
+        <Field name="oscurecer" type="javax.swing.JButton" visibility="private"/>
+        <Field name="paletaColores" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="pause" type="javax.swing.JButton" visibility="private"/>
+        <Field name="play" type="javax.swing.JButton" visibility="private"/>
+        <Field name="potencianesima" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="propias" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="punto" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="raiznesima" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="rectangulo" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="rectanguloRedondeado" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="reproductorHebra" type="javax.swing.JButton" visibility="private"/>
+        <Field name="rescaleOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="rojo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="rotacion" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="rotacion180" type="javax.swing.JButton" visibility="private"/>
+        <Field name="rotacion270" type="javax.swing.JButton" visibility="private"/>
+        <Field name="rotacion90" type="javax.swing.JButton" visibility="private"/>
+        <Field name="sinusoidal" type="javax.swing.JButton" visibility="private"/>
+        <Field name="stop" type="javax.swing.JButton" visibility="private"/>
+        <Field name="tintOp" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="tipoRelleno" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="tipoTransparencia" type="javax.swing.JComboBox" visibility="private"/>
+        <Field name="transLogaritmo" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="umbralSliderColor" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="umbralSliderGris" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="ver" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="ver_barra_atrib_imagen" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="ver_barra_atributos" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="ver_barra_estado" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="ver_barra_formas" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="verde" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="nuevoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="guardarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rescaleOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="brilloSliderStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="convolveOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="brilloSliderFocusGained" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="brilloSliderFocusLost" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="filtroActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="negroActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rojoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="azulActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="blancoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="amarilloActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="verdeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="lineaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="puntoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rectanguloActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="elipseActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="grosorStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="alisarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="editarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="nuevoArchivoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirArchivoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="guardarArchivoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ver_barra_formasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ver_barra_estadoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ver_barra_atributosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="affineTransformOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="lookupOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="seno" returnType="LookupTable" visibility="public" isStatic="true">
+          <Argument type="double" name="w"/>
+        </Method>
+        <Method name="bandCombineOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="colorConvertOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="contrasteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="iluminarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="oscurecerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="sinusoidalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rotacion90ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rotacion180ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rotacion270ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="aumentarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="disminuirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rotacionFocusLost" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="rotacionFocusGained" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="rotacionStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderColorFocusLost" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderColorFocusGained" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderColorStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="aumentarBinariaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="disminuirBinariaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tintOpActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="conversionGrisActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirAudioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="guardarAudioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirVentanaReproduccionActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirVentanaCamaraActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirReproduccionActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="camaraActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="abrirVentanaCapturaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="guardarAudio_ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="rectanguloRedondeadoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="curvaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="capturaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="transLogaritmoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="raiznesimaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="potencianesimaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="eliminarMitadBandaCentralActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="duplicarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderGrisFocusGained" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderGrisFocusLost" returnType="void" visibility="private">
+          <Argument type="java.awt.event.FocusEvent" name="evt"/>
+        </Method>
+        <Method name="umbralSliderGrisStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="negativoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="discontinuidadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="acercaDeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tipoRellenoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tipoTransparenciaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="paletaColoresActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="ver_barra_atrib_imagenActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="reproductorHebraActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="openActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="playActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="pauseActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="stopActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getFrame" returnType="BufferedImage" visibility="public">
+          <Argument type="Player" name="player"/>
+        </Method>
+        <Method name="convertImageType" returnType="BufferedImage" visibility="package">
+          <Argument type="BufferedImage" name="img"/>
+          <Argument type="int" name="type"/>
+        </Method>
+        <Method name="getTipoRelleno" returnType="JComboBox" visibility="public"/>
+        <Method name="setTipoRelleno" returnType="void" visibility="public">
+          <Argument type="JComboBox" name="tipoRelleno"/>
+        </Method>
+        <Method name="getTipoTransparencia" returnType="JComboBox" visibility="public"/>
+        <Method name="setTipoTransparencia" returnType="void" visibility="public">
+          <Argument type="JComboBox" name="tipoTransparencia"/>
+        </Method>
+        <Method name="getDiscontinuidad" returnType="JToggleButton" visibility="public"/>
+        <Method name="getBrilloSlider" returnType="JSlider" visibility="public"/>
+        <Method name="getCurva" returnType="JToggleButton" visibility="public"/>
+        <Method name="getAlisar" returnType="JToggleButton" visibility="public"/>
+        <Method name="getAmarillo" returnType="JButton" visibility="public"/>
+        <Method name="getAzul" returnType="JButton" visibility="public"/>
+        <Method name="getBlanco" returnType="JButton" visibility="public"/>
+        <Method name="getEditar" returnType="JToggleButton" visibility="public"/>
+        <Method name="getElipse" returnType="JToggleButton" visibility="public"/>
+        <Method name="getGrosor" returnType="JSpinner" visibility="public"/>
+        <Method name="getLinea" returnType="JToggleButton" visibility="public"/>
+        <Method name="getNegro" returnType="JButton" visibility="public"/>
+        <Method name="getPunto" returnType="JToggleButton" visibility="public"/>
+        <Method name="getRectangulo" returnType="JToggleButton" visibility="public"/>
+        <Method name="getRectanguloRedondeado" returnType="JToggleButton" visibility="public"/>
+        <Method name="getRojo" returnType="JButton" visibility="public"/>
+        <Method name="getVerde" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="practica7.VentanaInternaCamara" target="practica7.VentanaInternaCamara" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="VP" source="practica7.VentanaInterna" target="practica7.VentanaPrincipal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="practica7.VentanaInternaJMFPlayer" target="practica7.VentanaInternaJMFPlayer" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

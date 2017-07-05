@@ -1,0 +1,33 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{4}
+\contentsline {section}{\numberline {2}Funcionalidad y manejo de la interfaz}{4}
+\contentsline {subsection}{\numberline {2.1}Men\IeC {\'u} Archivo}{4}
+\contentsline {subsection}{\numberline {2.2}Men\IeC {\'u} Ver}{5}
+\contentsline {subsection}{\numberline {2.3}Men\IeC {\'u} Imagen}{5}
+\contentsline {subsection}{\numberline {2.4}Men\IeC {\'u} Ayuda}{6}
+\contentsline {subsection}{\numberline {2.5}Barra archivo}{6}
+\contentsline {subsection}{\numberline {2.6}Barra de formas}{7}
+\contentsline {subsection}{\numberline {2.7}Barra de atributos}{7}
+\contentsline {subsection}{\numberline {2.8}Barra Multimedia}{8}
+\contentsline {subsection}{\numberline {2.9}Barra de Atributos de Imagen}{8}
+\contentsline {section}{\numberline {3}Entorno multiventana.}{9}
+\contentsline {subsection}{\numberline {3.1}Ventana Principal}{10}
+\contentsline {subsection}{\numberline {3.2}VentanaInterna}{17}
+\contentsline {subsection}{\numberline {3.3}VentanaInternaGrabador}{18}
+\contentsline {subsection}{\numberline {3.4}VentanaInternaReproductor}{19}
+\contentsline {subsection}{\numberline {3.5}VentanaInternaReproductorHebra}{20}
+\contentsline {subsection}{\numberline {3.6}VentanaInternaJMFPlayer}{23}
+\contentsline {subsection}{\numberline {3.7}VentanaInternaCamara}{24}
+\contentsline {section}{\numberline {4}Clases implementadas para las formas geometricas.(sm.fgm.graficos)}{25}
+\contentsline {subsection}{\numberline {4.1}Figura}{27}
+\contentsline {subsection}{\numberline {4.2}MiLinea}{30}
+\contentsline {subsection}{\numberline {4.3}MiRectangulo}{31}
+\contentsline {subsection}{\numberline {4.4}MiRectanguloRedondeado}{33}
+\contentsline {subsection}{\numberline {4.5}MiElipse}{34}
+\contentsline {subsection}{\numberline {4.6}MiCurva}{36}
+\contentsline {section}{\numberline {5}Clases utilizadas para el dibujado de formas geom\IeC {\'e}tricas e im\IeC {\'a}genes.(sm.fgm.iu)}{38}
+\contentsline {subsection}{\numberline {5.1}Lienzo2Dfinal}{38}
+\contentsline {subsection}{\numberline {5.2}Lienzo2DImagenfinal}{45}
+\contentsline {section}{\numberline {6}Operaciones Propias}{47}
+\contentsline {section}{\numberline {7}Uso de Hebras}{55}
+\contentsline {subsection}{\numberline {7.1}Reproductor de la VentanaPrincipal}{56}
